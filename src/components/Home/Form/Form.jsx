@@ -1,7 +1,9 @@
 import React from 'react';
 import Loader from '../../common/Loader/Loader';
+import Modal from '../../../features/modal/components/Modal';
 import { useDispatch } from 'react-redux/es/exports';
 import { toggle } from '../../../features/requestBtn/requestBtnSlice';
+import { showModal } from '../../../features/modal/modalSlice';
 import { useInView } from 'react-intersection-observer';
 import api from '../../../api/api';
 
@@ -40,7 +42,7 @@ const Form = () => {
 
         try {
             await api.fetchRequest(data);
-            alert('Заявка отправленна, ждите');
+            dispatch(showModal('Заявка отправленна, с вами скоро свяжутся'));
             setName('');
             setTel('');
             setMail('');
@@ -53,7 +55,6 @@ const Form = () => {
 
     return (
         <>
-            <div className={s.laser}></div>
             <div className={s.formWrapper}>
                 <div id='formBlock' ref={ref} className={s.formContent}>
                     <form onSubmit={handleSubmit}>
@@ -85,6 +86,7 @@ const Form = () => {
                     </div>
                 </div>
             </div>
+            <Modal />
         </>
     );
 };

@@ -1,0 +1,31 @@
+.pickup {
+    display: flex;
+    width: 100%;
+    border-top: 5px solid var(--gray);
+    padding: 63px 0 51px 0;
+    background-color: var(--metallic);
+}
+
+.pickupContent {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+
+    p {
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 37px;
+        margin-bottom: 29px;
+    }
+
+    a {
+        font-size: 25px;
+    }
+}
+
+.map {
+    width: 663px;
+    height: 553px;
+    border: none;
+}

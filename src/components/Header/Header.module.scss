@@ -1,0 +1,42 @@
+%text-style {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.header {
+    display: flex;
+    height: 120px;
+    background: linear-gradient(92.13deg, rgba(248, 248, 248, 0) 42.93%, rgba(79, 19, 27, 0.2) 76.93%), linear-gradient(94.67deg, rgba(79, 19, 27, 0.2) 12.5%, rgba(0, 0, 0, 0) 38.85%), #C8A183;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1104px;
+    color: var(--dark-blue);
+
+    a {
+        @extend %text-style;
+        transition: 0.2s;
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+}
+
+.schedule {
+    text-align: center;
+    @extend %text-style;
+}
+
+.linksColor {
+    color: var(--dark-blue);
+}
+
+.active {
+    color: var(--purple);
+}

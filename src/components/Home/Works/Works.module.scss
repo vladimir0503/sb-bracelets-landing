@@ -1,0 +1,34 @@
+.separator {
+    width: 100%;
+    height: 200px;
+    background-color: var(--gray);
+}
+
+.works {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 66px 0 142px 0;
+    background-color: var(--metallic);
+}
+
+.worksContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1095px;
+    height: 775px;
+}
+
+.worksItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.workItem {
+    width: 383.6px;
+    height: 314.71px;
+    background: #D9D9D9;
+    margin-bottom: 25px;
+}

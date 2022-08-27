@@ -1,0 +1,17 @@
+.telBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 204px;
+    color: var(--dark-blue);
+
+    a {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30px;
+        transition: 0.2s;
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LinkWrapper from '../common/LinkWrapper/LinkWrapper';
 import visa from '../../images/visa.png'
 import mc from '../../images/mc.png'
@@ -14,7 +15,7 @@ const Footer = () => {
                     <h3>Полезные ссылки</h3>
                     <LinkWrapper id='delivery'>Доставка</LinkWrapper>
                     <LinkWrapper id='payment'>Оплата</LinkWrapper>
-                    <a href='#'>Политика конфиденциальности</a>
+                    <Link to='/confidentiality'>Политика конфиденциальности</Link>
                 </div>
                 <div className={s.contentItem}>
                     <h3>Оплата</h3>

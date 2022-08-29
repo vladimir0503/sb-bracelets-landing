@@ -1,32 +1,48 @@
 .about {
     display: flex;
-    background-color: var(--metallic);
     padding-top: 40px;
     width: 100%;
-    border-top: 4px solid var(--gray);
+
+    span {
+        color: var(--purple);
+    }
 }
 
-.aboutContent {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 681px;
-}
-
-.aboutDesct {
+%text-style {
     font-weight: 500;
     font-size: 30px;
     line-height: 44px;
     margin-bottom: 24px;
 }
 
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1104px;
+}
+
+.aboutDesct {
+    @extend %text-style;
+}
+
 .paymentDescr {
+    @extend %text-style;
+    text-align: center;
+    margin: 0;
+}
+
+.prepayment {
+    @extend %text-style;
     font-weight: 300;
-    font-size: 25px;
-    line-height: 37px;
+    text-align: center;
 }
 
 .aboutItem {
-    text-align: center;
     margin-bottom: 24px;
+}
+
+.textWrapper {
+    padding: 15px 38px 0 49px;
+    border: 2px solid #333333;
 }

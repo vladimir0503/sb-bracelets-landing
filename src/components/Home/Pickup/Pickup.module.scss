@@ -7,8 +7,10 @@
 .pickupContent {
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 988px;
+    padding: 62px 60px 0 60px;
     margin: 0 auto;
+    border-top: 3px solid #400002;
 
     p {
         font-weight: 300;
@@ -20,6 +22,17 @@
     a {
         font-size: 25px;
     }
+}
+
+.addresBlock {
+    width: 301px;
+    height: 273px;
+    border: 2px solid #333333;
+}
+
+.adressWrapper {
+    padding: 0 20px 0 22px;
+    margin-top: -20px;
 }
 
 .map {

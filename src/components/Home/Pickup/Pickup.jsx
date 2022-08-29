@@ -10,8 +10,10 @@ const Pickup = () => {
             <div className={s.pickupContent}>
                 <div className={s.addresBlock}>
                     <Title text='САМОВЫВОЗ' />
-                    <p>Адрес: г.Клин, Ул. Гагарина, 28,<br></br> офис 5. Часы работы: пн-вс<br></br> - 10:00-19:00</p>
-                    <TelBlock />
+                    <div className={s.adressWrapper}>
+                        <p>Адрес: г.Клин, Ул. Гагарина, 28, офис 5. Часы работы: пн-вс - 10:00-19:00</p>
+                        <TelBlock />
+                    </div>
                 </div>
                 <iframe
                     className={s.map}

@@ -1,5 +1,6 @@
 .benefits {
     display: flex;
+    flex-direction: column;
     padding-top: 57px;
     width: 100%;
     height: 378px;
@@ -36,4 +37,74 @@
         margin-bottom: 32px;
     }
 
+}
+
+// @-webkit-keyframes translateAnim
+
+// /* Safari and Chrome */
+//     {
+//     from {
+//         -webkit-transform: translateY(0em);
+//         -o-transform: translateY(0em);
+//         transform: translateY(0em);
+
+//     }
+
+//     to {
+//         -webkit-transform: translateY(10em);
+//         -o-transform: translateY(10em);
+//         transform: translateY(10em);
+//     }
+// }
+
+// @keyframes translateAnim {
+//     from {
+//         -ms-transform: translateY(0em);
+//         -moz-transform: translateY(0em);
+//         -webkit-transform: translateY(0em);
+//         -o-transform: translateY(0em);
+//         transform: translateY(0em);
+//     }
+
+//     to {
+//         -ms-transform: translateY(10em);
+//         -moz-transform: translateY(10em);
+//         -webkit-transform: translateY(10em);
+//         -o-transform: translateY(10em);
+//         transform: translateY(10em);
+//     }
+// }
+
+// @keyframes translateAnim {
+//     from {
+//         -ms-transform: translateY(0em);
+//         -moz-transform: translateY(0em);
+//         -webkit-transform: translateY(0em);
+//         -o-transform: translateY(0em);
+//         transform: translateY(0em);
+//     }
+
+//     to {
+//         -ms-transform: translateY(10em);
+//         -moz-transform: translateY(10em);
+//         -webkit-transform: translateY(10em);
+//         -o-transform: translateY(10em);
+//         transform: translateY(10em);
+//     }
+// }
+
+// .medalStyle2 {
+//     -webkit-animation: translateAnim 10s linear alternate-reverse infinite;
+//     -moz-animation: translateAnim 10s linear alternate-reverse infinite;
+//     -ms-animation: translateAnim 10s linear alternate-reverse infinite;
+//     -o-animation: translateAnim 10s linear alternate-reverse infinite;
+//     animation: translateAnim 10s linear alternate-reverse infinite;
+// }
+
+.medalBlock {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 1074px;
+    margin-top: -274px;
 }

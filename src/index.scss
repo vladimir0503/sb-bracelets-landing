@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
 
+
 :root {
   --beige: #C8A183;
   --dark-blue: #2D2D2D;
@@ -17,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--metallic);
+  overflow-x: hidden;
 }
 
 h1,

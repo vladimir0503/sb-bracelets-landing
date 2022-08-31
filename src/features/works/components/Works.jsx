@@ -14,7 +14,7 @@ const Works = () => {
         disptach(getWorkItems())
     };
 
-    React.useEffect(getWorks, [works]);
+    React.useEffect(getWorks, []);
 
     return (
         <div className={s.works}>

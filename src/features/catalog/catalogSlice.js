@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import api from "../../api/api";
 
 const initialState = {
-    catalog: []
+    catalog: [],
+    catalogName: 'bracelets'
 };
 
 const objToArray = obj => {
@@ -23,10 +24,13 @@ export const catalogSlice = createSlice({
         loadCatalog: (state, action) => {
             state.catalog = objToArray(action.payload);
         },
+        chooseName: (state, action) => {
+            state.catalogName = action.payload;
+        }
     },
 });
 
-export const { loadCatalog } = catalogSlice.actions;
+export const { loadCatalog, chooseName } = catalogSlice.actions;
 
 export const getCatalog = name => async dispatch => {
     const catalog = await api.getProducts(name);

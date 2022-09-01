@@ -1,19 +1,31 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import Menu from '../components/Menu/Menu';
+
 
 import s from './Catalog.module.scss';
 
 const Catalog = () => {
 
-    const { name } = useParams();
+    const { catalogName, catalog } = useSelector(state => state.catalog);
 
     React.useEffect(() => {
-        console.log(name);
-    }, []);
+        console.log(catalogName);
+    }, [catalogName])
 
     return (
         <div className={s.catalog}>
-            <h1>Catalog</h1>
+            <div className={s.catalogContent}>
+                <Menu />
+                <div className={s.products}>
+                    <div className={s.catalogItem}>
+                        <img alt='photo' />
+                        <p>Артикул</p>
+                        <h3>Название изделия</h3>
+                        <button>Подробно</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

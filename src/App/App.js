@@ -15,7 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/catalog/:name' element={<Catalog />} />
+        <Route path='/catalog' element={<Catalog />} />
+        <Route path='/card/:id' />
         <Route path='/confidentiality' element={<Confidentiality />} />
       </Routes>
       <Footer />

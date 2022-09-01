@@ -1,0 +1,36 @@
+.catalogNawbar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    border: 1px solid #000000;
+}
+
+%active-name {
+    background-color: var(--purple);
+    color: #D5D5D5;
+    border: 2px solid #FFFFFF;
+}
+
+.catalogName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    color: #414141;
+    list-style-type: none;
+    margin: 0;
+    font-weight: 400;
+    font-size: 25px;
+    transition: 0.2s;
+    border: 2px solid var(--metallic);
+    cursor: pointer;
+
+    &:hover {
+        @extend %active-name
+    }
+}
+
+.activeName {
+    @extend %active-name
+}

@@ -1,8 +1,10 @@
 .catalogNawbar {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     display: flex;
     flex-direction: column;
     width: 272px;
+    height: 400px;
     border: 1px solid #000000;
 }
 

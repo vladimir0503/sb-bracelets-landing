@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimWrapper from '../common/AnimWrapper/AnimWrapper'
 import RequestBtn from '../../features/requestBtn/components/RequestBtn';
 import SliderBlock from './SliderBlock/SliderBlock';
 import Benefits from './Benefits/Benefits';
@@ -12,16 +13,18 @@ import s from './Home.module.scss';
 
 const Home = () => {
     return (
-        <div className={s.home}>
-            <RequestBtn />
-            <SliderBlock />
-            <Benefits />
-            <About />
-            <Works />
-            <Reviews />
-            <Pickup />
-            <Form />
-        </div>
+        <AnimWrapper>
+            <div className={s.home}>
+                <RequestBtn />
+                <SliderBlock />
+                <Benefits />
+                <About />
+                <Works />
+                <Reviews />
+                <Pickup />
+                <Form />
+            </div>
+        </AnimWrapper>
     );
 };
 

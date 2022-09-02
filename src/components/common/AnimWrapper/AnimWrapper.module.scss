@@ -1,0 +1,13 @@
+@keyframes opacity-anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animWrapper {
+    animation: opacity-anim 0.3s;
+}

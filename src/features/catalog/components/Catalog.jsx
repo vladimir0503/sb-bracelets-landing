@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import AnimWrapper from '../../../components/common/AnimWrapper/AnimWrapper';
 import Menu from '../components/Menu/Menu';
+import CatalogItem from './CatalogItem/CatalogItem';
 
 
 import s from './Catalog.module.scss';
@@ -14,19 +16,21 @@ const Catalog = () => {
     }, [catalogName])
 
     return (
-        <div className={s.catalog}>
-            <div className={s.catalogContent}>
-                <Menu />
-                <div className={s.products}>
-                    <div className={s.catalogItem}>
-                        <img alt='photo' />
-                        <p>Артикул</p>
-                        <h3>Название изделия</h3>
-                        <button>Подробно</button>
+        <AnimWrapper>
+            <div className={s.catalog}>
+                <div className={s.catalogContent}>
+                    <Menu />
+                    <div className={s.products}>
+                        <CatalogItem />
+                        <CatalogItem />
+                        <CatalogItem />
+                        <CatalogItem />
+                        <CatalogItem />
+                        <CatalogItem />
                     </div>
                 </div>
             </div>
-        </div>
+        </AnimWrapper>
     );
 };
 

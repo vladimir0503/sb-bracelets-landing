@@ -6,8 +6,9 @@ import s from './Menu.module.scss';
 
 const Menu = () => {
 
-    const { catalogName, } = useSelector(state => state.catalog);
+    const menuRef = React.useRef();
 
+    const { catalogName, } = useSelector(state => state.catalog);
     const dispatch = useDispatch()
 
     const nawItems = [
@@ -41,8 +42,14 @@ const Menu = () => {
         dispatch(chooseName(name));
     };
 
+    React.useEffect(() => {
+        const parent = menuRef.current.parentElement;
+
+        console.log(parent);
+    }, []);
+
     return (
-        <nav className={s.catalogNawbar}>
+        <nav ref={menuRef} className={s.catalogNawbar}>
             <ul>
                 {nawItems.map(({ nameRu, nameEng }, i) => (
                     <li

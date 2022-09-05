@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { chooseName } from '../../catalogSlice';
 
@@ -6,9 +7,9 @@ import s from './Menu.module.scss';
 
 const Menu = () => {
 
-    const menuRef = React.useRef();
+    const navigate = useNavigate();
+    const { catalogName } = useSelector(state => state.catalog);
 
-    const { catalogName, } = useSelector(state => state.catalog);
     const dispatch = useDispatch()
 
     const nawItems = [
@@ -40,16 +41,11 @@ const Menu = () => {
 
     const chooseCatalog = name => {
         dispatch(chooseName(name));
+        navigate('/catalog');
     };
 
-    React.useEffect(() => {
-        const parent = menuRef.current.parentElement;
-
-        console.log(parent);
-    }, []);
-
     return (
-        <nav ref={menuRef} className={s.catalogNawbar}>
+        <nav className={s.catalogNawbar}>
             <ul>
                 {nawItems.map(({ nameRu, nameEng }, i) => (
                     <li

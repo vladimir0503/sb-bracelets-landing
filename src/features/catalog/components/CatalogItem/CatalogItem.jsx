@@ -1,17 +1,28 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import noImg from '../../../../images/noImg.jpg'
+import AnimWrapper from '../../../../components/common/AnimWrapper/AnimWrapper';
+import api from '../../../../api/api';
 
 import s from './CatalogItem.module.scss';
 
-const CatalogItem = () => {
+const CatalogItem = ({ item }) => {
+
+    const navigate = useNavigate();
+
+    const goToCart = id => {
+        navigate(`/card/${item.catalogName}/${id}`);
+    };
 
     return (
-        <div className={s.catalogItem}>
-            <img src={noImg} alt='photo' />
-            <p>Артикул</p>
-            <h3>Название изделия</h3>
-            <button>Подробно</button>
-        </div>
+        <AnimWrapper>
+            <div className={s.catalogItem}>
+                <img src={!item.imageUrl ? noImg : item.imageUrl} alt='photo' />
+                <p>{item.article}</p>
+                <h3>{item.name}</h3>
+                <button onClick={() => goToCart(item.id)}>Подробно</button>
+            </div>
+        </AnimWrapper>
     );
 };
 

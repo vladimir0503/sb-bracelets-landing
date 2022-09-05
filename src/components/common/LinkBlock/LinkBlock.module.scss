@@ -1,15 +1,6 @@
 .linkBlock {
     display: flex;
-    width: 252px;
     justify-content: space-between;
-
-    p {
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 30px;
-        line-height: 34px;
-        transition: 0.2s;
-    }
 
     a {
         &:hover {

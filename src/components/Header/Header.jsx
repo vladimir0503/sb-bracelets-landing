@@ -16,7 +16,7 @@ const Header = () => {
                     пн-сб<br></br>
                     10:00 - 20:00</p>
                 <TelBlock />
-                <LinkBlock style={s.linksColor} activeStyle={s.active} />
+                <LinkBlock style={s.linksStyle} activeStyle={s.active} />
             </div>
         </div>
     );

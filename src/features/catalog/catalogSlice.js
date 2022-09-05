@@ -3,6 +3,7 @@ import api from "../../api/api";
 
 const initialState = {
     catalog: [],
+    isLoading: false,
     catalogName: 'bracelets'
 };
 
@@ -24,17 +25,22 @@ export const catalogSlice = createSlice({
         loadCatalog: (state, action) => {
             state.catalog = objToArray(action.payload);
         },
+        toggleLoading: (state, action) => {
+            state.isLoading = action.payload;
+        },
         chooseName: (state, action) => {
             state.catalogName = action.payload;
         }
     },
 });
 
-export const { loadCatalog, chooseName } = catalogSlice.actions;
+export const { loadCatalog, toggleLoading, chooseName } = catalogSlice.actions;
 
 export const getCatalog = name => async dispatch => {
+    dispatch(toggleLoading(true));
     const catalog = await api.getProducts(name);
     dispatch(loadCatalog(catalog));
+    dispatch(toggleLoading(false));
     return catalog;
 };
 

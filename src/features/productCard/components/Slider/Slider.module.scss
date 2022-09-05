@@ -1,0 +1,22 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstSlide {
+    width: 540px;
+    height: 430px;
+    margin-bottom: 28px;
+}
+
+.sliderItems {
+    display: flex;
+    overflow: auto;
+    width: 540px;
+}
+
+.sliderItem {
+    width: 96px;
+    height: 87px;
+    margin-right: 15px;
+}

@@ -4,19 +4,19 @@ const chatId = -776018338;
 const telegramApi = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=`;
 
 const getProducts = async name => {
-    const res = await fetch(`${urlDb}/${name}.json`);
+    const res = await fetch(`${urlDb}/catalog/${name}.json`);
+    const data = await res.json();
+    return data;
+};
+
+const getProductInfo = async (name, id) => {
+    const res = await fetch(`${urlDb}/catalog/${name}/${id}.json`);
     const data = await res.json();
     return data;
 };
 
 const getWorks = async () => {
     const res = await fetch(`${urlDb}/works.json`);
-    const data = await res.json();
-    return data;
-};
-
-const fetchProductInfo = async (name, id) => {
-    const res = await fetch(`${urlDb}/catalog/${name}/${id}.json`);
     const data = await res.json();
     return data;
 };
@@ -30,7 +30,7 @@ const fetchRequest = async ({ name, tel, mail }) => {
 const api = {
     getProducts,
     getWorks,
-    fetchProductInfo,
+    getProductInfo,
     fetchRequest
 };
 

@@ -9,8 +9,9 @@ const LinkBlock = ({ style, activeStyle }) => {
     const [active, setActive] = React.useState(false);
 
     return (
-        <div className={s.linkBlock}>
-            <p className={`${style} ${active && activeStyle}`}>Написать нам в:</p>
+        <div className={`${s.linkBlock} ${style}`}>
+            {/* <p className={`${style} ${active && activeStyle}`}>Написать нам в:</p> */}
+            <p className={`${active && activeStyle}`}>Написать нам в:</p>
             <a
                 onMouseEnter={() => setActive(true)}
                 onMouseLeave={() => setActive(false)}

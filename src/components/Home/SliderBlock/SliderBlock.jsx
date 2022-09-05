@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import s from './SliderBlock.module.scss';
 
 const SliderBlock = () => {
-    const [screenHeight, setHeight] = React.useState();
+    // const [screenHeight, setHeight] = React.useState();
 
     const navigate = useNavigate('');
 
@@ -12,12 +12,12 @@ const SliderBlock = () => {
         navigate('/catalog');
     };
 
-    React.useEffect(() => {
-        setHeight(window.screen.height);
-    }, []);
+    // React.useEffect(() => {
+    //     setHeight(window.screen.height);
+    // }, []);
 
     return (
-        <div style={{'height': `${screenHeight}px`}} className={s.sliderBlock}>
+        <div className={s.sliderBlock}>
             <div className={s.sliderBlockContent}>
                 <h1>Реализуйте изделия для себя и<br></br> своих близких</h1>
                 <p>Добавте персональную гравировку: имена<br></br>

@@ -3,7 +3,7 @@ import arrow from '../../../../images/arrow.svg';
 
 import s from './ProductInfo.module.scss';
 
-const ProductInfo = () => {
+const ProductInfo = ({ info }) => {
     const [infoIndex, setInfoIndex] = React.useState(0);
 
     const toggleInfo = index => {
@@ -20,35 +20,32 @@ const ProductInfo = () => {
             {
                 infoIndex === 0
                     ? <div className={s.infoBlock}>
-                        <h2>НАЗВАНИЕ ТОВАРА</h2>
-                        <p>Артикул</p>
+                        <h2>{info?.name}</h2>
+                        <p>Артикул: {info?.article}</p>
                         <p>Текст гравировки согласовывается индивидуально с менеджером</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>{info?.description}</p>
                     </div>
                     : infoIndex === 1
-                    ? <div className={s.delivery}>
-                        <p>Адрес: г.Клин, Ул. Гагарина, 28, офис 5. Часы работы: пн-вс - 10:00-19:00 
-                        Предворительно требется связаться по номеру:<br></br> <a href="tel:+79037652683">8(903)765-26-83</a></p>
-                        <ul>
-                            <li>Доставка по России от 2 дней </li>
-                            <li>России или силами ТК по предоплате - 250 руб</li>
-                            <li>Курьерская доставка СДЭК по России (по предоплате) - от 350 руб.*</li>
-                        </ul>
-                    </div>
-                    : <div className={s.payment}>
-                        <ul>
-                            <li>Наличный расчет (Оплата заказа при получении наличными возможна при самовывозе)</li>
-                            <li>Банковская карта</li>
-                        </ul>
-                        <p>* Для товаров с индивидуальной гравировкой мы работаем по предоплате. 
-                        Предоплата вносится после утверждения эскиза гравировки и всех деталей заказа и доставки</p>
-                    </div>
+                        ? <div className={s.delivery}>
+                            <p>Адрес: г.Клин, Ул. Гагарина, 28, офис 5. Часы работы: пн-вс - 10:00-19:00
+                                Предворительно требется связаться по номеру:<br></br> <a href="tel:+79037652683">8(903)765-26-83</a></p>
+                            <ul>
+                                <li>Доставка по России от 2 дней </li>
+                                <li>России или силами ТК по предоплате - 250 руб</li>
+                                <li>Курьерская доставка СДЭК по России (по предоплате) - от 350 руб.*</li>
+                            </ul>
+                        </div>
+                        : <div className={s.payment}>
+                            <ul>
+                                <li>Наличный расчет (Оплата заказа при получении наличными возможна при самовывозе)</li>
+                                <li>Банковская карта</li>
+                            </ul>
+                            <p>* Для товаров с индивидуальной гравировкой мы работаем по предоплате.
+                                Предоплата вносится после утверждения эскиза гравировки и всех деталей заказа и доставки</p>
+                        </div>
             }
             <div className={s.buttonsWrapper}>
-                <h2>ЦЕНА ₽</h2>
+                <h2>{info?.price} ₽</h2>
                 <div className={s.buttonsBlock}>
                     <button>ЗАКАЗАТЬ</button>
                     <button>ИДЕИ ГРАВИРОВКИ</button>

@@ -25,12 +25,16 @@ const ProductCard = () => {
         <div className={s.productCard}>
             <div className={s.productCardWrapper}>
                 <Menu />
-                <AnimWrapper>
-                    <div className={s.productCardContent}>
-                        <Slider />
-                        <ProductInfo />
-                    </div>
-                </AnimWrapper>
+                {
+                    isLoading
+                        ? <h2>Загрузка...</h2>
+                        : <AnimWrapper>
+                            <div className={s.productCardContent}>
+                                <Slider />
+                                <ProductInfo info={product} />
+                            </div>
+                        </AnimWrapper>
+                }
             </div>
         </div>
     );

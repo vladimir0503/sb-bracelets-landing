@@ -15,7 +15,7 @@ const Catalog = () => {
 
     React.useEffect(() => {
         dispatch(getCatalog(catalogName));
-    }, [catalogName])
+    }, [catalogName]);
 
     return (
         <AnimWrapper>

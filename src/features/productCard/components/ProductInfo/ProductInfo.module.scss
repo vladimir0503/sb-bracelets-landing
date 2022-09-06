@@ -28,6 +28,13 @@
     }
 }
 
+%title {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37px;
+    margin-bottom: 50px;
+}
+
 .productInfo {
     display: flex;
     flex-direction: column;
@@ -37,24 +44,32 @@
     padding: 46px 71px 10px 40px;
     transition: 0.2s;
     color: var(--dark-blue);
-
-    h2 {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 36px;
-        margin-bottom: 50px;
-    }
-
-    p {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        margin-bottom: 16px;
-    }
 }
 
 .infoBlock {
     animation: opacity-anim1 0.3s;
+
+    h2 {
+        @extend %title;
+    }
+
+    p {
+        margin-bottom: 16px;
+
+        &:nth-child(3) {
+            font-weight: 500;
+        }
+
+        &:nth-child(4) {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 120%;
+        }
+    }
+}
+
+.price {
+    @extend %title;
 }
 
 .buttonsWrapper {
@@ -90,7 +105,19 @@
             margin-left: 8px;
             transition: 0.3s;
         }
+
+        &.active {
+            background-color: var(--purple);
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
     }
+}
+
+.btnActive {
+    background-color: var(--purple);
 }
 
 %text-style {
@@ -132,10 +159,6 @@
     }
 }
 
-.active {
-    background-color: var(--purple);
-
-    img {
-        transform: rotate(180deg);
-    }
+.hide {
+    opacity: 0;
 }

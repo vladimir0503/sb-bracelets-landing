@@ -45,7 +45,7 @@ const ProductInfo = ({ info }) => {
                         </div>
             }
             <div className={s.buttonsWrapper}>
-                <h2>{info?.price} ₽</h2>
+                <h2 className={`${s.price} ${infoIndex !== 0 && s.hide}`}>{info?.price} ₽</h2>
                 <div className={s.buttonsBlock}>
                     <button>ЗАКАЗАТЬ</button>
                     <button>ИДЕИ ГРАВИРОВКИ</button>

@@ -7,7 +7,8 @@
 
 .catalogContent {
     display: flex;
-    width: 1717px;
+    justify-content: space-between;
+    width: 1386px;
     margin: 0 auto;
 }
 
@@ -16,4 +17,13 @@
     flex-wrap: wrap;
     width: 1083px;
     margin-left: 32px;
+}
+
+.empty {
+    text-align: center;
+    margin-left: 185px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 74px;
+    color: var(--dark-blue);
 }

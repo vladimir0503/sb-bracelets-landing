@@ -36,6 +36,48 @@
     flex-direction: column;
 }
 
+.sliderBlock {
+    width: 540px;
+    height: 430px;
+    margin-bottom: 23px;
+}
+
+.btnsBlock {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 507px;
+    margin: 0 auto;
+    top: -278px;
+    transition: 0.4s;
+    opacity: 0;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        background-color: var(--purple);
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(2px);
+        }
+
+        &:active {
+            transform: translateY(5px);
+        }
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 .slideImg {
     display: none;
     width: 540px;

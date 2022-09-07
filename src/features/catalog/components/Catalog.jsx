@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCatalog } from '../catalogSlice';
+import LoaderMedium from '../../../components/common/Loader/LoaderMedium/LoaderMedium';
 import AnimWrapper from '../../../components/common/AnimWrapper/AnimWrapper';
 import Menu from '../components/Menu/Menu';
 import CatalogItem from './CatalogItem/CatalogItem';
@@ -25,12 +26,12 @@ const Catalog = () => {
                     <div className={s.products}>
                         {
                             isLoading
-                                ? 'Загрузка...'
+                                ? <LoaderMedium />
                                 : catalog.length
                                     ? catalog.map((item, i) => (
                                         <CatalogItem key={i} item={{ ...item, catalogName }} />
                                     ))
-                                    : <h1>Пока ничего нет(</h1>
+                                    : <h1 className={s.empty}>ОЙ! В ЭТОЙ КАТЕГОРИИ ПОХОЖЕ<br></br> НИЧЕГО НЕТ</h1>
                         }
                     </div>
                 </div>

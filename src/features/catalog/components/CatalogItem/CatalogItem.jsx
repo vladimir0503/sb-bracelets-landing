@@ -17,7 +17,8 @@ const CatalogItem = ({ item }) => {
     return (
         <AnimWrapper>
             <div className={s.catalogItem}>
-                <img src={!item.imageUrl ? noImg : item.imageUrl} alt='photo' />
+                {/* <img src={!item.imageUrl ? noImg : item.imageUrl} alt='photo' /> */}
+                <img src={!item.slides?.[0] ? noImg : item.slides?.[0]} alt='photo' />
                 <p>{item.article}</p>
                 <h3>{item.name}</h3>
                 <button onClick={() => goToCart(item.id)}>Подробно</button>

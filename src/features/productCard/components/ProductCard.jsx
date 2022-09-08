@@ -30,7 +30,7 @@ const ProductCard = () => {
                         ? <h2>Загрузка...</h2>
                         : <AnimWrapper>
                             <div className={s.productCardContent}>
-                                <Slider />
+                                <Slider slides={product?.slides} />
                                 <ProductInfo info={product} />
                             </div>
                         </AnimWrapper>

@@ -49,7 +49,7 @@ const Menu = () => {
             <ul>
                 {nawItems.map(({ nameRu, nameEng }, i) => (
                     <li
-                        className={`${s.catalogName} ${catalogName === nameEng && s.activeName}`}
+                        className={`${s.catalogName} ${catalogName === nameEng ? s.activeName : ''}`}
                         onClick={() => chooseCatalog(nameEng)}
                         key={i}
                     >

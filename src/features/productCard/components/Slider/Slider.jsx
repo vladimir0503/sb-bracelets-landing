@@ -1,5 +1,4 @@
 import React from 'react';
-import scroll from 'react-scroll';
 import arrowLeft from '../../../../images/arrowLeft.svg'
 import arrowRight from '../../../../images/arrowRight.svg'
 import noImg from '../../../../images/noImg.jpg';
@@ -38,6 +37,11 @@ const Slider = () => {
         });
     };
 
+    React.useEffect(() => {
+        const img = document.getElementById(count);
+        img.scrollIntoView({block: "nearest", inline: "center", behavior: "smooth"});
+    }, [count])
+
     return (
         <div className={s.slider}>
             <div
@@ -48,12 +52,12 @@ const Slider = () => {
                 {arrImg.map((slide, i) => (
                     <img
                         key={i}
-                        className={`${s.slideImg} ${count === i && s.activeSlide}`}
+                        className={`${s.slideImg} ${count === i ? s.activeSlide : ''}`}
                         src={slide}
                         alt='slide'
                     />
                 ))}
-                <div className={`${s.btnsBlock} ${btnsInit && s.active}`}>
+                <div className={`${s.btnsBlock} ${btnsInit ? s.active : ''}`}>
                     <button onClick={slideLeft}><img src={arrowLeft} alt='arrow' /></button>
                     <button onClick={slideRight}><img src={arrowRight} alt='arrow' /></button>
                 </div>
@@ -61,9 +65,10 @@ const Slider = () => {
             <div className={s.sliderItems}>
                 {arrImg.map((img, i) => (
                     <img
+                        id={i}
                         onClick={() => setCount(i)}
                         key={i}
-                        className={`${s.sliderItem} ${count === i && s.activeItem}`}
+                        className={`${s.sliderItem} ${count === i ? s.activeItem : ''}`}
                         src={img}
                         alt='slide'
                     />

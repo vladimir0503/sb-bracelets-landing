@@ -10,8 +10,7 @@ const LinkBlock = ({ style, activeStyle }) => {
 
     return (
         <div className={`${s.linkBlock} ${style}`}>
-            {/* <p className={`${style} ${active && activeStyle}`}>Написать нам в:</p> */}
-            <p className={`${active && activeStyle}`}>Написать нам в:</p>
+            <p className={`${active ? activeStyle : ''}`}>Написать нам в:</p>
             <a
                 onMouseEnter={() => setActive(true)}
                 onMouseLeave={() => setActive(false)}

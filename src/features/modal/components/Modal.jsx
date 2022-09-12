@@ -22,7 +22,7 @@ const Modal = () => {
         <>
             {
                 isActive
-                && <div className={`${s.modalWrapper} ${isActive && s.active}`}>
+                && <div className={s.modalWrapper}>
                     <div className={s.modalBlock}>
                         <h2>{message}</h2>
                         <button onClick={() => dispatch(hideModal())}>ОК</button>

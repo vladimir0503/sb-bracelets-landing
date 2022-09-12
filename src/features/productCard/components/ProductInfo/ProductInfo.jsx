@@ -1,10 +1,16 @@
 import React from 'react';
 import arrow from '../../../../images/arrow.svg';
+import EngravingIdeas from './EngravingIdeas/EngravingIdeas';
 
 import s from './ProductInfo.module.scss';
 
 const ProductInfo = ({ info }) => {
     const [infoIndex, setInfoIndex] = React.useState(0);
+    const [ideas, setIdeas] = React.useState(false);
+
+    const showIdeas = () => {
+        setIdeas(true);
+    };
 
     const toggleInfo = index => {
         if (index !== infoIndex) {
@@ -48,7 +54,7 @@ const ProductInfo = ({ info }) => {
                 <h2 className={`${s.price} ${infoIndex !== 0 && s.hide}`}>{info?.price} ₽</h2>
                 <div className={s.buttonsBlock}>
                     <button>ЗАКАЗАТЬ</button>
-                    <button>ИДЕИ ГРАВИРОВКИ</button>
+                    <button onClick={showIdeas}>ИДЕИ ГРАВИРОВКИ</button>
                     <button
                         onClick={() => toggleInfo(1)}
                         className={infoIndex === 1 && s.active}
@@ -63,6 +69,7 @@ const ProductInfo = ({ info }) => {
                     </button>
                 </div>
             </div>
+            {ideas && <EngravingIdeas toggle={setIdeas} slides={info?.engravingIdeas} />}
         </div>
     );
 };

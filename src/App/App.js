@@ -7,12 +7,12 @@ import Footer from '../components/Footer/Footer';
 import Confidentiality from '../components/Сonfidentiality/Сonfidentiality';
 import ProductCard from '../features/productCard/components/ProductCard';
 
-import './App.scss';
+import s from './App.module.scss';
 
 function App() {
 
   return (
-    <div >
+    <div className={s.App}>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

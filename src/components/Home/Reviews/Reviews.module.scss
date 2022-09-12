@@ -6,6 +6,34 @@
 .reviewsContent {
     display: flex;
     flex-direction: column;
-    width: 1095px;
+    width: 1182px;
     margin: 0 auto;
+    padding-top: 71px;
+    border-top: 3px solid #400002;
+}
+
+.reviewsItems {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    img {
+        position: relative;
+        z-index: 1000;
+
+        &:nth-child(1) {
+            width: 399px;
+            height: 337px;
+        }
+
+        &:nth-child(2) {
+            width: 304px;
+            height: 392px;
+        }
+
+        &:nth-child(3) {
+            width: 399px;
+            height: 341px;
+        }
+    }
 }

@@ -7,13 +7,14 @@
 
 .productCardWrapper {
     display: flex;
-    width: 1717px;
+    justify-content: space-between;
+    width: 1400px;
     margin: 0 auto;
+    margin-top: 95px;
 }
 
 .productCardContent {
     display: flex;
     justify-content: space-between;
-    width: 1127px;
-    margin-left: 34px;
+    width: 1113px;
 }

@@ -16,6 +16,8 @@ const Works = () => {
 
     React.useEffect(getWorks, []);
 
+    console.log(works);
+
     return (
         <div className={s.works}>
             <div className={s.worksContent}>

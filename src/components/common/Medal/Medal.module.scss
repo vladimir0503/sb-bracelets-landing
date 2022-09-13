@@ -3,3 +3,9 @@
     z-index: 800;
     transition: 10s;
 }
+
+@media screen and (max-width: 375px) {
+    .medal {
+        display: none;
+    }
+}

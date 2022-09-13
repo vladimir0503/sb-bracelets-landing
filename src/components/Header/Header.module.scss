@@ -32,6 +32,10 @@
     }
 }
 
+img[alt="logo-small"] {
+    display: none;
+}
+
 .schedule {
     text-align: center;
     @extend %text-style;
@@ -47,4 +51,35 @@
 
 .active {
     color: var(--purple);
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        height: 50px;
+    }
+
+    img[alt="logo"] {
+        display: none;
+    }
+
+    img[alt="logo-small"] {
+        display: block;
+    }
+
+    .schedule {
+        display: none;
+    }
+
+    .headerContent {
+        width: 245px;
+
+        a {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    .linksStyle {
+        width: 35px;
+    }
 }

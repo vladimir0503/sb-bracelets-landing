@@ -59,3 +59,22 @@
     @extend %medals-block;
     margin-top: -311px;
 }
+
+@media screen and (max-width: 375px) {
+    .aboutContent {
+        width: 221px;
+
+        p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+
+    .textWrapper {
+        padding: 9px 6px 13px 18px;
+    }
+
+    .prepayment {
+        margin: 0;
+    }
+}

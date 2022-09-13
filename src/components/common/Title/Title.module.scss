@@ -6,3 +6,10 @@
     margin-bottom: 22px;
     color: var(--dark-blue);
 }
+
+@media screen and (max-width: 375px) {
+    .title {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}

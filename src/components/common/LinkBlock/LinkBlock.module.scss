@@ -16,3 +16,16 @@
 .active {
     color: var(--purple);
 }
+
+@media screen and (max-width: 375px) {
+    .linkBlock {
+        p {
+            display: none;
+        }
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

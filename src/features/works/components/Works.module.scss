@@ -44,3 +44,39 @@
     margin-bottom: 23px;
     border: 3px solid var(--gray);
 }
+
+@media screen and (max-width: 375px) {
+    .works {
+        padding: 20px 0 41px 0;
+    }
+
+    .worksContent {
+        width: 221px;
+        height: auto;
+        padding-top: 25px;
+    }
+
+    %proportions {
+        width: 160px;
+        height: 145px;
+        margin-right: 18px;
+    }
+
+    .worksItems {
+        flex-wrap: inherit;
+        overflow: auto;
+        width: 100vw;
+
+        img {
+            @extend %proportions;
+
+            &:nth-child(2) {
+                @extend %proportions;
+            }
+
+            &:nth-child(5) {
+                @extend %proportions;
+            }
+        }
+    }
+}

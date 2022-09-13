@@ -2,9 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProductCard } from '../productCardSlice';
+import LoaderMedium from '../../../components/common/Loader/LoaderMedium/LoaderMedium';
 import Slider from './Slider/Slider'
 import ProductInfo from './ProductInfo/ProductInfo';
-import noImg from '../../../images/noImg.jpg';
 import AnimWrapper from '../../../components/common/AnimWrapper/AnimWrapper';
 import Menu from '../../catalog/components/Menu/Menu';
 
@@ -27,7 +27,7 @@ const ProductCard = () => {
                 <Menu />
                 {
                     isLoading
-                        ? <h2>Загрузка...</h2>
+                        ? <div><LoaderMedium /></div>
                         : <AnimWrapper>
                             <div className={s.productCardContent}>
                                 <Slider slides={product?.slides} />

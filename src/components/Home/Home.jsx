@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <AnimWrapper>
             <div className={s.home}>
-                <RequestBtn />
+                {/* <RequestBtn /> */}
                 <SliderBlock />
                 <Benefits />
                 <About />

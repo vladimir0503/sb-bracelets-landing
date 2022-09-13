@@ -12,7 +12,9 @@ const Pickup = () => {
                     <Title text='САМОВЫВОЗ' />
                     <div className={s.adressWrapper}>
                         <p>Адрес: г.Клин, Ул. Гагарина, 28, офис 5. Часы работы: пн-вс - 10:00-19:00</p>
-                        <TelBlock />
+                        <div className={s.telWrapper}>
+                            <TelBlock />
+                        </div>
                     </div>
                 </div>
                 <iframe

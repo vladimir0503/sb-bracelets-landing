@@ -3,7 +3,7 @@
     align-items: center;
     width: 100%;
     height: 695px;
-    background: url('../../../images/slide1.jpg');
+    background: url("../../../images/slide1.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -34,14 +34,39 @@
         width: 161px;
         height: 60px;
         background: #333333;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #ffffff;
         font-size: 18px;
         line-height: 27px;
-        color: #FFFFFF;
+        color: #ffffff;
         transition: 0.3s;
 
         &:hover {
             background: var(--purple);
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .sliderBlock {
+        height: 178px;
+    }
+
+    .sliderBlockContent {
+        h1 {
+            font-size: 10px;
+            line-height: 140%;
+        }
+
+        p {
+            font-size: 9px;
+            line-height: 135%;
+        }
+
+        button {
+            width: 49px;
+            height: 13px;
+            font-size: 5px;
+            line-height: 7px;
         }
     }
 }

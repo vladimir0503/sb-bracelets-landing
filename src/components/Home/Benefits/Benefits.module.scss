@@ -36,7 +36,6 @@
     img {
         margin-bottom: 32px;
     }
-
 }
 
 .medalBlock {
@@ -45,4 +44,55 @@
     margin: 0 auto;
     width: 1074px;
     margin-top: -274px;
+}
+
+@media screen and (max-width: 375px) {
+    .benefits {
+        padding-top: 15px;
+        height: auto;
+    }
+
+    .benefitsContent {
+        flex-direction: column;
+        width: 179px;
+        height: auto;
+    }
+
+    .benefitsItem {
+        margin-bottom: 25px;
+
+        br {
+            display: none;
+        }
+
+        img {
+            background-size: cover;
+            margin-bottom: 7px;
+        }
+
+        img[alt="truck"] {
+            width: 59px;
+            height: 46px;
+        }
+
+        img[alt="loupe"] {
+            height: 63px;
+            margin-bottom: 7px;
+        }
+
+        img[alt="laser"] {
+            width: 58px;
+            height: 52px;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
 }

@@ -90,6 +90,18 @@
     margin-top: 13px;
     width: 226px;
     color: #2d2d2d;
+
+    a {
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(2px);
+        }
+
+        &:active {
+            transform: translateY(5px);
+        }
+    }
 }
 
 .active {

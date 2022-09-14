@@ -22,6 +22,15 @@
     opacity: 1;
 }
 
+@media screen and (max-width: 1184px) {
+    .requestBtn {
+        width: 97px;
+        height: 70px;
+        right: 39px;
+        top: 178px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .requestBtn {
         right: 34px;

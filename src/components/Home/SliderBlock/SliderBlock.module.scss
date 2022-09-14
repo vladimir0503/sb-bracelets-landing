@@ -46,6 +46,33 @@
     }
 }
 
+@media screen and (max-width: 1184px) {
+    .sliderBlock {
+        height: 403px;
+    }
+
+    .sliderBlockContent {
+        h1 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 135%;
+        }
+
+        button {
+            width: 104px;
+            height: 39px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .sliderBlock {
         height: 178px;

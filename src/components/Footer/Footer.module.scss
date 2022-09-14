@@ -108,6 +108,32 @@
     color: var(--purple);
 }
 
+@media screen and (max-width: 1184px) {
+    .footer {
+        padding-bottom: 83px;
+    }
+
+    .footerContent {
+        width: 730px;
+        margin-bottom: 84px;
+    }
+
+    .contentItem {
+        h3 {
+            margin-bottom: 21px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    .copyright {
+        width: 730px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .footer {
         height: auto;

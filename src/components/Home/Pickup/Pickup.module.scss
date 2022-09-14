@@ -41,16 +41,52 @@
     border: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1184px) {
     .pickup {
         padding: 22px 0 10px 0;
     }
 
     .pickupContent {
+        width: 730px;
+        padding: 31px 0 10px 0;
+    }
+
+    .addresBlock {
+        width: 228px;
+        height: 207px;
+    }
+
+    .adressWrapper {
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin: 0;
+        }
+
+        a {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        img {
+            display: block;
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .map {
+        width: 420px;
+        height: 338px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .pickupContent {
+        width: 221px;
         flex-direction: column;
         align-items: center;
-        width: 221px;
-        padding: 22px 0 10px 0;
     }
 
     .addresBlock {
@@ -68,8 +104,6 @@
         text-align: center;
 
         img {
-            display: block;
-            background-size: cover;
             width: 12px;
             height: 12px;
         }

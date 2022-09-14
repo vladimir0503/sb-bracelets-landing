@@ -21,6 +21,12 @@
     flex-direction: column;
     margin: 0 auto;
     width: 1182px;
+
+    .aboutItem {
+        &:nth-child(2) {
+            padding-bottom: 10px
+        }
+    }
 }
 
 .aboutDesct {
@@ -31,6 +37,7 @@
     @extend %text-style;
     text-align: center;
     margin: 0;
+    margin-bottom: 10px
 }
 
 .prepayment {
@@ -60,6 +67,17 @@
     margin-top: -311px;
 }
 
+@media screen and (max-width: 1184px) {
+    .aboutContent {
+        width: 730px;
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .aboutContent {
         width: 221px;
@@ -71,7 +89,7 @@
     }
 
     .textWrapper {
-        padding: 9px 6px 13px 18px;
+        padding: 9px 15px 13px 18px;
     }
 
     .prepayment {

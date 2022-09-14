@@ -45,14 +45,41 @@
     border: 3px solid var(--gray);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1184px) {
     .works {
         padding: 20px 0 41px 0;
     }
 
     .worksContent {
-        width: 221px;
+        width: 730px;
         height: auto;
+    }
+
+    %img-medium {
+        width: 307px;
+        height: 266px;
+    }
+
+    .worksItems {
+        width: 651px;
+
+        img {
+            @extend %img-medium;
+
+            &:nth-child(2) {
+                @extend %img-medium;
+            }
+
+            &:nth-child(5) {
+                @extend %img-medium;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .worksContent {
+        width: 221px;
         padding-top: 25px;
     }
 

@@ -69,9 +69,43 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1184px) {
     .formWrapper {
         height: 234px;
+    }
+
+    .formContent {
+        width: 730px;
+
+        form {
+            input {
+                width: 248px;
+                height: 31px;
+            }
+        }
+
+        button {
+            width: 147px;
+            height: 31px;
+        }
+    }
+
+    .descrBlock {
+        h2 {
+            font-size: 25px;
+            line-height: 110.2%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .formWrapper {
         background-position: -8rem;
     }
 

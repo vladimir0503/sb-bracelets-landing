@@ -38,18 +38,40 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1184px) {
     .reviewsContent {
-        width: 221px;
-        padding-top: 26px
+        width: 730px;
+        padding-top: 26px;
     }
 
     .reviewsItems {
         flex-direction: column;
+        align-items: center;
 
         img {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
 
+            &:nth-child(1) {
+                width: 303px;
+                height: 257px;
+            }
+
+            &:nth-child(3) {
+                width: 303px;
+                height: 257px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .reviewsContent {
+        width: 221px;
+    }
+
+    .reviewsItems {
+        img {
+            margin-bottom: 10px;
 
             &:nth-child(1) {
                 width: 221px;

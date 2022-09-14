@@ -16,6 +16,19 @@
     }
 }
 
+@media screen and (max-width: 1184px) {
+    .telBlock {
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            width: 21px;
+            height: 21px;
+            margin-right: 10px;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .telBlock {
         width: auto;

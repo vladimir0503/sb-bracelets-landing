@@ -53,6 +53,46 @@ img[alt="logo-small"] {
     color: var(--purple);
 }
 
+@media screen and (max-width: 1184px) {
+    .header {
+        height: 93px;
+    }
+
+    img[alt="logo"] {
+        display: none;
+    }
+
+    img[alt="logo-small"] {
+        display: block;
+        background-size: cover;
+        width: 181px;
+        height: 57px;
+    }
+
+    .headerContent {
+        width: 730px;
+
+        p {
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 121.2%;
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        a {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .linksStyle {
+        width: 92px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .header {
         height: 50px;
@@ -64,6 +104,8 @@ img[alt="logo-small"] {
 
     img[alt="logo-small"] {
         display: block;
+        width: 77px;
+        height: 24px;
     }
 
     .schedule {

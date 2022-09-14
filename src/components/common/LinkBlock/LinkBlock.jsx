@@ -1,6 +1,6 @@
 import React from 'react';
-import tel from '../../../images/tel.png';
-import whatsapp from '../../../images/whatsapp.png';
+import tel from '../../../images/tel.svg';
+import whatsapp from '../../../images/whatsapp.svg';
 
 import s from './LinkBlock.module.scss';
 

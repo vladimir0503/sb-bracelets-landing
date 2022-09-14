@@ -95,3 +95,119 @@
 .active {
     color: var(--purple);
 }
+
+@media screen and (max-width: 375px) {
+    .footer {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        width: 224px;
+        text-align: center;
+    }
+
+    .contentItem {
+        h3 {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+
+    .telWrapper {
+        width: 196px;
+        margin: 0 auto;
+
+        img {
+            position: relative;
+            top: 4px;
+            display: block;
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .payment {
+        align-items: center;
+
+        img {
+            &:nth-child(1) {
+                width: 113px;
+                height: 32px;
+                margin-bottom: 22px;
+            }
+
+            &:nth-child(2) {
+                width: 113px;
+                height: 35px;
+                margin-bottom: 22px;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                left: 0px;
+                width: 82px;
+                height: 50px;
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    .linksStyle {
+        width: 171px;
+        margin: 0 auto;
+        margin-top: 10px;
+
+        p {
+            display: block;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+
+            &:hover {
+                transform: translateY(2px);
+            }
+
+            &:active {
+                transform: translateY(5px);
+            }
+        }
+
+        a {
+            &:nth-child(2) {
+                img {
+                    width: 30px;
+                    height: 31px;
+                }
+            }
+
+            &:nth-child(3) {
+                img {
+                    width: 31px;
+                    height: 31px;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        justify-content: space-between;
+        width: 287px;
+
+        p {
+            &:nth-child(1) {
+                margin: 0;
+            }
+        }
+    }
+}

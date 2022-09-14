@@ -29,15 +29,15 @@ const Footer = () => {
                 </div>
                 <div className={s.contentItem}>
                     <h3>Контакты</h3>
-                    <TelBlock />
+                    <div className={s.telWrapper}><TelBlock /></div>
                     <p className={s.address}>Россия,  г.Клин, Ул. Гагарина, 28, офис 5</p>
                     <p className={s.address}>Часы работы: пн-вс - 10:00-19:00</p>
                     <LinkBlock style={s.linksStyle} activeStyle={s.active} />
                 </div>
             </div>
             <div className={s.copyright}>
-                <p>(c) 2022 Все прова защищены </p>
-                <p>Сделано в Figma</p>
+                <p>(c) 2022 Все права защищены </p>
+                <p><u>Сделано в Figma</u></p>
             </div>
         </div>
     );

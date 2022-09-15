@@ -78,7 +78,17 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 730px) {
+    .aboutContent {
+        width: 350px;
+    }
+
+    .textWrapper {
+        padding: 15px 15px 0 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
     .aboutContent {
         width: 221px;
 

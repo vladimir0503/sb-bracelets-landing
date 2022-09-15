@@ -77,9 +77,9 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 730px) {
     .worksContent {
-        width: 221px;
+        width: 350px;
         padding-top: 25px;
     }
 
@@ -105,5 +105,11 @@
                 @extend %proportions;
             }
         }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .worksContent {
+        width: 221px;
     }
 }

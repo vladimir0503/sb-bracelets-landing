@@ -78,7 +78,9 @@ const Form = () => {
                             type='email'
                             placeholder='e-mail'
                             value={mail}></input>
-                        <button disabled={sending}>{!sending ? 'ОТПРАВИТЬ' : <Loader />}</button>
+                        <button disabled={sending}>
+                            {!sending ? 'ОТПРАВИТЬ' : <Loader />}
+                        </button>
                     </form>
                     <div className={s.descrBlock}>
                         <h2>ОСТАВЬТЕ<br></br> ЗАЯВКУ</h2>

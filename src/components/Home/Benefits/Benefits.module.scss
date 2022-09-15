@@ -63,24 +63,34 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 730px) {
     .benefits {
         padding-top: 15px;
     }
 
     .benefitsContent {
-        width: 179px;
+        width: 330px;
+        padding: 20px 10px 0 10px;
     }
 
     .benefitsItem {
-        margin-bottom: 25px;
-
         br {
             display: none;
         }
 
         img {
             background-size: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .benefitsContent {
+        width: 179px;
+    }
+
+    .benefitsItem {
+        img {
             margin-bottom: 7px;
         }
 

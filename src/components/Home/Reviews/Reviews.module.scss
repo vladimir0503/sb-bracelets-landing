@@ -64,7 +64,13 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 730px) {
+    .reviewsContent {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 320px) {
     .reviewsContent {
         width: 221px;
     }

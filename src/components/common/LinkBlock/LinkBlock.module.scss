@@ -2,16 +2,6 @@
     display: flex;
     justify-content: space-between;
 
-    // img {
-    //     &:hover {
-    //         transform: translateY(2px);
-    //     }
-
-    //     &:active {
-    //         transform: translateY(5px);
-    //     }
-    // }
-
     a {
         &:hover {
             transform: translateY(2px);
@@ -27,15 +17,25 @@
     color: var(--purple);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 730px) {
     .linkBlock {
         p {
             display: none;
         }
 
         img {
-            width: 15px;
-            height: 15px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .linkBlock {
+
+        img {
+            width: 27px;
+            height: 27px;
         }
     }
 }

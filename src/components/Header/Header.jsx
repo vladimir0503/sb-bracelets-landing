@@ -13,7 +13,7 @@ const Header = () => {
         <header>
             <div className={s.headerContent}>
                 <Link to='/'>
-                    <img src={logo} alt='logo' />
+                    <img className={s.logo} src={logo} alt='logo' />
                 </Link>
                 <p className={s.schedule}>Режим работы<br></br>
                     пн-сб<br></br>

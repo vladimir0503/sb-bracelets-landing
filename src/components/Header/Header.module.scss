@@ -32,10 +32,6 @@ header {
     }
 }
 
-img[alt="logo-small"] {
-    display: none;
-}
-
 .schedule {
     text-align: center;
     @extend %text-style;
@@ -59,13 +55,9 @@ img[alt="logo-small"] {
     }
 
     img[alt="logo"] {
-        display: none;
-    }
-
-    img[alt="logo-small"] {
         display: block;
         background-size: cover;
-        width: 181px;
+        width: 148px;
         height: 57px;
     }
 
@@ -102,9 +94,9 @@ img[alt="logo-small"] {
         display: none;
     }
 
-    img[alt="logo-small"] {
+    img[alt="logo"] {
         width: 96px;
-        height: 30px;
+        height: 37px;
     }
 
     .headerContent {
@@ -115,7 +107,7 @@ img[alt="logo-small"] {
             line-height: 15px;
         }
     }
-    
+
     .linksStyle {
         width: 68px;
     }
@@ -124,6 +116,11 @@ img[alt="logo-small"] {
 @media screen and (max-width: 320px) {
     header {
         height: 50px;
+    }
+
+    img[alt="logo"] {
+        width: 90px;
+        height: 34px;
     }
 
     .headerContent {

@@ -14,7 +14,6 @@ const Header = () => {
             <div className={s.headerContent}>
                 <Link to='/'>
                     <img src={logo} alt='logo' />
-                    <img src={logoSmall} alt='logo-small' />
                 </Link>
                 <p className={s.schedule}>Режим работы<br></br>
                     пн-сб<br></br>

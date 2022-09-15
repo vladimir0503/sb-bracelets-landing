@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LinkWrapper from '../common/LinkWrapper/LinkWrapper';
+import { HashLink } from 'react-router-hash-link';
 import mir from '../../images/mir.png'
 import visa from '../../images/visa.png'
 import mc from '../../images/mc.png'
@@ -11,12 +11,12 @@ import TelBlock from '../common/TelBlock/TelBlock';
 const Footer = () => {
 
     return (
-        <div className={s.footer}>
+        <footer className={s.footer}>
             <div className={s.footerContent}>
                 <div className={s.contentItem}>
                     <h3>Полезные ссылки</h3>
-                    <LinkWrapper id='delivery'><p className={s.navLink}>Доставка</p></LinkWrapper>
-                    <LinkWrapper id='payment'><p className={s.navLink}>Оплата</p></LinkWrapper>
+                    <HashLink smooth to={'/#delivery'}><p className={s.navLink}>Доставка</p></HashLink>
+                    <HashLink smooth to={'/#payment'}><p className={s.navLink}>Оплата</p></HashLink>
                     <Link to='/confidentiality'><p className={s.navLink}>Политика конфиденциальности</p></Link>
                 </div>
                 <div className={s.contentItem}>
@@ -39,7 +39,7 @@ const Footer = () => {
                 <p>(c) 2022 Все права защищены </p>
                 <p><u>Сделано в Figma</u></p>
             </div>
-        </div>
+        </footer>
     );
 };
 

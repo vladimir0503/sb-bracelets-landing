@@ -10,7 +10,7 @@ import s from './Header.module.scss';
 const Header = () => {
 
     return (
-        <div className={s.header}>
+        <header>
             <div className={s.headerContent}>
                 <Link to='/'>
                     <img src={logo} alt='logo' />
@@ -22,7 +22,7 @@ const Header = () => {
                 <TelBlock />
                 <LinkBlock style={s.linksStyle} activeStyle={s.active} />
             </div>
-        </div>
+        </header>
     );
 };
 

@@ -4,7 +4,7 @@
     line-height: 30px;
 }
 
-.header {
+header {
     position: absolute;
     display: flex;
     height: 120px;
@@ -54,7 +54,7 @@ img[alt="logo-small"] {
 }
 
 @media screen and (max-width: 1184px) {
-    .header {
+    header {
         height: 93px;
     }
 
@@ -94,7 +94,7 @@ img[alt="logo-small"] {
 }
 
 @media screen and (max-width: 375px) {
-    .header {
+    header {
         height: 50px;
     }
 

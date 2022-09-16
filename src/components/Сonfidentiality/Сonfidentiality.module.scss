@@ -2,7 +2,6 @@
     width: 100%;
     height: 100%;
     padding: 179px 0 39px 0;
-    background-color: var(--metallic);
 }
 
 %text-style {
@@ -32,4 +31,47 @@
 .title {
     text-align: center;
     margin-bottom: 65px;
+}
+
+@media screen and (max-width: 1184px) {
+    .content {
+        width: 730px;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .confidentiality {
+        padding: 93px 0 0 0;
+    }
+
+    .content {
+        width: 350px;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        width: 245px;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 150%;
+        }
+    }
 }

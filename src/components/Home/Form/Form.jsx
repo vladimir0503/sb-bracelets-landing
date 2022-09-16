@@ -42,7 +42,7 @@ const Form = () => {
 
         try {
             await api.fetchRequest(data);
-            dispatch(showModal('Заявка отправленна, с вами скоро свяжутся'));
+            dispatch(showModal('Заявка отправлена, с вами скоро свяжутся.'));
             setName('');
             setTel('');
             setMail('');
@@ -75,7 +75,6 @@ const Form = () => {
                         <input
                             required
                             onChange={e => setMail(e.target.value)}
-                            type='email'
                             placeholder='e-mail'
                             value={mail}></input>
                         <button disabled={sending}>

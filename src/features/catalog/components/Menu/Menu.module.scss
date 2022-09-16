@@ -1,4 +1,4 @@
-.catalogNawbar {
+.catalogNavbar {
     position: sticky;
     top: 0px;
     display: flex;
@@ -8,10 +8,21 @@
     border: 1px solid #000000;
 }
 
+.burgerBtn {
+    position: relative;
+    top: 3px;
+    left: 276px;
+    width: 57px;
+    height: 57px;
+    margin-bottom: -57px;
+    display: none;
+    background-color: #ffffff00;
+}
+
 %active-name {
     background-color: var(--purple);
-    color: #D5D5D5;
-    border: 2px solid #FFFFFF;
+    color: #d5d5d5;
+    border: 2px solid #ffffff;
 }
 
 .catalogName {
@@ -29,12 +40,65 @@
     cursor: pointer;
 
     &:hover {
-        @extend %active-name
+        @extend %active-name;
     }
 }
 
 .activeName {
     background-color: var(--purple);
-    color: #D5D5D5;
-    border: 2px solid #FFFFFF;
+    color: #d5d5d5;
+    border: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 1184px) {
+    .catalogNavbar {
+        position: fixed;
+        z-index: 100000;
+        top: 94px;
+        left: -274px;
+        transition: 0.3s;
+
+        &.activeNavbar {
+            left: 0;
+        }
+    }
+
+    .burgerBtn {
+        display: block;
+    }
+
+    .catalogName {
+        background-color: var(--metallic);
+    }
+
+    .activeName {
+        background-color: var(--purple);
+        color: #d5d5d5;
+        border: 2px solid #ffffff;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .catalogNavbar {
+        top: 59px;
+    }
+
+    .burgerBtn {
+        left: 273px;
+
+        img {
+            width: 47px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .catalogNavbar {
+        width: 245px;
+        left: -247px;
+    }
+
+    .burgerBtn {
+        left: 249px;
+    }
 }

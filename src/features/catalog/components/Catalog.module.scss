@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
-    // padding: 99px 0 99px 0;
 }
 
 .catalogContent {
@@ -28,4 +27,38 @@
     font-size: 50px;
     line-height: 74px;
     color: var(--dark-blue);
+}
+
+@media screen and (max-width: 1184px) {
+    .catalogContent {
+        width: 730px;
+    }
+
+    .products {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .empty {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .catalogContent {
+        width: 350px;
+        margin-top: 127px;
+    }
+
+    .empty {
+        font-size: 33px;
+        line-height: 49px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .catalogContent {
+        width: 245px;
+    }
 }

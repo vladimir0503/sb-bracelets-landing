@@ -185,6 +185,8 @@ footer {
                 width: 113px;
                 height: 32px;
                 margin-bottom: 22px;
+                top: 4px;
+                right: 6px;
             }
 
             &:nth-child(2) {
@@ -195,10 +197,11 @@ footer {
 
             &:nth-child(3) {
                 position: relative;
-                left: 0px;
                 width: 82px;
                 height: 50px;
                 margin-bottom: 22px;
+                bottom: 6px;
+                left: 2px;
             }
         }
     }
@@ -258,5 +261,16 @@ footer {
     .payment {
         align-items: center;
         flex-direction: column;
+
+        img {
+            &:nth-child(1) {
+                left: 6px;
+                top: 0px;
+            }
+
+            &:nth-child(2) {
+                left: 0;
+            }
+        }
     }
 }

@@ -21,7 +21,16 @@
 
 @media screen and (max-width: 1184px) {
 
+    .productCardWrapper {
+        width: 730px;
+        justify-content: center;
+        margin-top: 69px;
+        margin-bottom: 52px;
+    }
+
     .productCardContent {
         flex-direction: column;
+        width: 100%;
+        margin: 0;
     }
 }

@@ -109,3 +109,22 @@
 .activeItem {
     box-shadow: 0px 1px 8px 0px black;
 }
+
+@media screen and (max-width: 1184px) {
+    .slider {
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .sliderItems {
+        width: 536px;
+    }
+
+    .btnsBlock {
+        opacity: 1;
+
+        button {
+            opacity: 50%;
+        }
+    }
+}

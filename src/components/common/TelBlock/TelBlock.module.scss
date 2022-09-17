@@ -1,7 +1,7 @@
 .telBlock {
     display: flex;
     justify-content: space-between;
-    width: 229px;
+    width: 214px;
     color: var(--dark-blue);
 
     a {
@@ -19,7 +19,8 @@
 @media screen and (max-width: 1184px) {
     .telBlock {
         align-items: center;
-        justify-content: flex-start;
+        // justify-content: flex-start;
+        width: 165px;
 
         img {
             width: 21px;

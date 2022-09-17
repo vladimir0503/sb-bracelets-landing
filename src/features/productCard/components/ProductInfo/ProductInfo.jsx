@@ -7,6 +7,7 @@ import s from './ProductInfo.module.scss';
 const ProductInfo = ({ info }) => {
     const [infoIndex, setInfoIndex] = React.useState(0);
     const [ideas, setIdeas] = React.useState(false);
+    const [formInit, setForm] = React.useState(false);
 
     const showIdeas = () => {
         setIdeas(true);

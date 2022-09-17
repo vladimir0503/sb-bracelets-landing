@@ -1,29 +1,12 @@
 import React from 'react';
-import exitImg from '../../../../../images/exit.svg';
-import Slider from '../../Slider/Slider'
-
-import s from './EngravingIdeas.module.scss';
+import ModalWrapper from '../ModalWrapper/ModalWrapper';
+import Slider from '../../Slider/Slider';
 
 const EngravingIdeas = ({ toggle, slides }) => {
-
-    const exit = () => {
-        toggle(false);
-    };
-
-    React.useEffect(() => {
-        document.body.style.overflow = 'hidden';
-
-        return () => {
-            document.body.style.overflowY = 'scroll';
-        };
-
-    }, []);
-
     return (
-        <div className={s.engravingIdeas}>
-            <button onClick={exit} className={s.exitBtn}><img src={exitImg} alt='exit' /></button>
+        <ModalWrapper toggle={toggle}>
             <Slider slides={slides} />
-        </div>
+        </ModalWrapper>
     );
 };
 

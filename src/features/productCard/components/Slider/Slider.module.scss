@@ -162,3 +162,23 @@
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    .slider {
+        width: 245px;
+    }
+
+    .sliderItems {
+        width: 245px;
+        height: 95px;
+    }
+
+    .sliderItem {
+        width: 80px;
+        height: 71px;
+    }
+
+    .btnsBlock {
+        width: 229px;
+    }
+}

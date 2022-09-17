@@ -173,9 +173,27 @@
         padding: 10px;
     }
 
+    %mob-text {
+        font-size: 22px;
+        line-height: 37px;
+    }
+
+    .delivery {
+        p,
+        li {
+            @extend %mob-text;
+        }
+    }
+
+    .payment {
+        p,
+        li {
+            @extend %mob-text;
+        }
+    }
+
     .infoBlock {
         p {
-
             &:nth-child(4) {
                 font-size: 20px;
             }
@@ -188,5 +206,15 @@
 
     .buttonsBlock {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .productInfo {
+        width: 245px;
+    }
+
+    .buttonsBlock {
+        width: auto;
     }
 }

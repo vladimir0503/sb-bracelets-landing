@@ -41,3 +41,13 @@
         margin-top: 21px;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .productCardWrapper {
+        width: 245px;
+    }
+
+    .productCardContent {
+        align-items: center;
+    }
+}

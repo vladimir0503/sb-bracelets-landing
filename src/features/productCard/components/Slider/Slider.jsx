@@ -37,8 +37,6 @@ const Slider = ({ slides }) => {
         img.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
     }, [count]);
 
-    console.log(slides?.length);
-
     return (
 
         <div className={s.slider}>

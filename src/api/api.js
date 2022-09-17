@@ -1,6 +1,6 @@
 const urlDb = 'https://engraving-db-13cea-default-rtdb.firebaseio.com';
 const botToken = '5728431671:AAGqB3TwIGbwTryXy--Zh36EnsSPx_0qXg8';
-const chatId = -776018338;
+const chatId = -662322773;
 const telegramApi = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=`;
 
 const getProducts = async name => {

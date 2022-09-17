@@ -6,6 +6,18 @@
 
 @media screen and (max-width: 1184px) {
     .medal {
-        display: none;
+        width: 157px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .medal {
+        width: 121px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .medal {
+        width: 90px;
     }
 }

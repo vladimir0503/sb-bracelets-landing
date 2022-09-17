@@ -1,17 +1,19 @@
 import React from 'react';
 import Medal from '../../common/Medal/Medal';
+import medal from '../../../images/medal.svg';
+import medal2 from '../../../images/medal2.svg'
 import Title from '../../common/Title/Title';
 import s from './About.module.scss';
 
 const About = () => {
     return (
         <div className={s.about}>
-            <Medal initTop={1442} initLeft={46} initRotate={110} />
-            <Medal initTop={1261} initLeft={586} initRotate={360} />
-            <Medal initTop={1838} initLeft={586} initRotate={360} />
-            <Medal initTop={2100} initLeft={686} initRotate={360} />
-            <Medal initTop={2200} initLeft={786} initRotate={360} />
-            <Medal initTop={2300} initLeft={486} initRotate={360} />
+            <Medal initTop={1442} initLeft={46} initRotate={110} img={medal} />
+            <Medal initTop={1261} initLeft={586} initRotate={360} img={medal} />
+            <Medal initTop={1838} initLeft={586} initRotate={360} img={medal} />
+            <Medal initTop={2100} initLeft={686} initRotate={360} img={medal2} />
+            <Medal initTop={2200} initLeft={786} initRotate={360} img={medal2} />
+            <Medal initTop={2300} initLeft={486} initRotate={360} img={medal2} />
             <div className={s.aboutContent}>
                 <div className={s.aboutItem}>
                     <Title text='О КОМПАНИИ' />

@@ -3,7 +3,7 @@ import medal from '../../../images/medal.svg';
 
 import s from './Medal.module.scss';
 
-const Medal = ({ initTop, initLeft, initRotate }) => {
+const Medal = ({ initTop, initLeft, initRotate, img }) => {
     const [top, setTop] = React.useState(initTop);
     const [left, setLeft] = React.useState(initLeft);
     const [rotate, setRotate] = React.useState(initRotate);
@@ -28,7 +28,7 @@ const Medal = ({ initTop, initLeft, initRotate }) => {
     }, []);
 
     return (
-        <img style={style} className={s.medal} src={medal} alt='medal' />
+        <img style={style} className={s.medal} src={img} alt='medal' />
     );
 };
 

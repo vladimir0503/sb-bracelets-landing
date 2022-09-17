@@ -50,6 +50,7 @@ const Menu = () => {
     ];
 
     const chooseCatalog = name => {
+        window.scrollTo(0, 0);
         toggleNavbar();
         dispatch(chooseName(name));
         navigate('/catalog');

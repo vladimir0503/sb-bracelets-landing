@@ -41,7 +41,6 @@
     justify-content: space-between;
     width: 444px;
     border: 2px solid #333333;
-    // padding: 46px 71px 10px 40px;
     padding: 46px 50px 10px 46px;
     transition: 0.2s;
     color: var(--dark-blue);
@@ -82,7 +81,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 310px;
 
     button {
@@ -97,6 +96,10 @@
         color: #ffffff;
         cursor: pointer;
         transition: 0.2s;
+
+        &:nth-child(2) {
+            width: 183px;
+        }
 
         &:hover {
             background-color: var(--purple);
@@ -162,4 +165,28 @@
 
 .hide {
     opacity: 0;
+}
+
+@media screen and (max-width: 730px) {
+    .productInfo {
+        width: 325px;
+        padding: 10px;
+    }
+
+    .infoBlock {
+        p {
+
+            &:nth-child(4) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .buttonsWrapper {
+        flex-direction: column;
+    }
+
+    .buttonsBlock {
+        justify-content: flex-start;
+    }
 }

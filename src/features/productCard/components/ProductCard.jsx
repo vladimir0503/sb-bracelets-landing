@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProductCard } from '../productCardSlice';
+import { fetchProductCard, getProductCard } from '../productCardSlice';
 import LoaderMedium from '../../../components/common/Loader/LoaderMedium/LoaderMedium';
 import Slider from './Slider/Slider'
 import ProductInfo from './ProductInfo/ProductInfo';
@@ -19,6 +19,7 @@ const ProductCard = () => {
 
     React.useEffect(() => {
         dispatch(fetchProductCard(name, id));
+        return () => dispatch(getProductCard(null));
     }, [name, id]);
 
     return (

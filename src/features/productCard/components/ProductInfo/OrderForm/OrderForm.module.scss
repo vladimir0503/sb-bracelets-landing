@@ -1,0 +1,37 @@
+.orderForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #a87e66;
+    padding-top: 65px;
+    padding-right: 32px;
+    padding-left: 64px;
+    padding-bottom: 24px;
+    color: white;
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .orderForm {
+        padding: 15px 13px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 466px) {
+    .orderForm {
+        width: 286px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .orderForm {
+        width: 265px;
+    }
+}

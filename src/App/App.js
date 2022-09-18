@@ -6,6 +6,7 @@ import Catalog from '../features/catalog/components/Catalog';
 import Footer from '../components/Footer/Footer';
 import Confidentiality from '../components/Сonfidentiality/Сonfidentiality';
 import ProductCard from '../features/productCard/components/ProductCard';
+import Modal from '../features/modal/components/Modal';
 
 import s from './App.module.scss';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/card/:name/:id' element={<ProductCard />} />
         <Route path='/confidentiality' element={<Confidentiality />} />
       </Routes>
+      <Modal />
       <Footer />
     </div>
   );

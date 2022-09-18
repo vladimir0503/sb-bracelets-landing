@@ -7,7 +7,7 @@ import About from './About/About';
 import Works from '../../features/works/components/Works';
 import Pickup from './Pickup/Pickup';
 import Reviews from './Reviews/Reviews';
-import Form from './Form/Form';
+import Form from './Feedback/Feedback';
 
 import s from './Home.module.scss';
 

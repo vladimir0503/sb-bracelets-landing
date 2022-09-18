@@ -1,6 +1,7 @@
 import React from 'react';
 import arrow from '../../../../images/arrow.svg';
 import EngravingIdeas from './EngravingIdeas/EngravingIdeas';
+import OrderForm from './OrderForm/OrderForm';
 
 import s from './ProductInfo.module.scss';
 
@@ -11,6 +12,10 @@ const ProductInfo = ({ info }) => {
 
     const showIdeas = () => {
         setIdeas(true);
+    };
+
+    const showOrderForm = () => {
+        setForm(true);
     };
 
     const toggleInfo = index => {
@@ -54,7 +59,7 @@ const ProductInfo = ({ info }) => {
             <div className={s.buttonsWrapper}>
                 <h2 className={`${s.price} ${infoIndex !== 0 && s.hide}`}>{info?.price} ₽</h2>
                 <div className={s.buttonsBlock}>
-                    <button>ЗАКАЗАТЬ</button>
+                    <button onClick={showOrderForm}>ЗАКАЗАТЬ</button>
                     <button onClick={showIdeas}>ИДЕИ ГРАВИРОВКИ</button>
                     <button
                         onClick={() => toggleInfo(1)}
@@ -71,6 +76,7 @@ const ProductInfo = ({ info }) => {
                 </div>
             </div>
             {ideas && <EngravingIdeas toggle={setIdeas} slides={info?.engravingIdeas} />}
+            {formInit && <OrderForm toggle={setForm} />}
         </div>
     );
 };

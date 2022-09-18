@@ -21,8 +21,13 @@ const getWorks = async () => {
     return data;
 };
 
-const fetchRequest = async ({ name, tel, mail }) => {
-    const message = `<b>Новая заявка!</b>%0A <b>Имя</b>: ${name}%0A <b>Телефон</b>: ${tel}%0A <b>Почта</b>: ${mail}`;
+// const fetchRequest = async ({ name, tel, mail }) => {
+//     const message = `<b>Новая заявка!</b>%0A <b>Имя</b>: ${name}%0A <b>Телефон</b>: ${tel}%0A <b>Почта</b>: ${mail}`;
+//     const res = await fetch(`${telegramApi}${message}`);
+//     return res;
+// };
+
+const fetchRequest = async message => {
     const res = await fetch(`${telegramApi}${message}`);
     return res;
 };

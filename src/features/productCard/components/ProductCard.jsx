@@ -18,6 +18,10 @@ const ProductCard = () => {
     const dispatch = useDispatch();
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    React.useEffect(() => {
         dispatch(fetchProductCard(name, id));
         return () => dispatch(getProductCard(null));
     }, [name, id]);

@@ -30,7 +30,6 @@ const Slider = ({ slides, sliderName = 'default' }) => {
     };
 
     React.useEffect(() => {
-        // const img = document.getElementById(count);
         const img = document.getElementById(`${count}${sliderName}`);
 
         if (!img) return;
@@ -62,7 +61,6 @@ const Slider = ({ slides, sliderName = 'default' }) => {
             <div className={s.sliderItems}>
                 {slides && slides.map((img, i) => (
                     <img
-                        // id={i}
                         id={`${i}${sliderName}`}
                         onClick={() => setCount(i)}
                         key={i}

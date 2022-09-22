@@ -5,7 +5,7 @@ import Slider from '../../Slider/Slider';
 const EngravingIdeas = ({ toggle, slides }) => {
     return (
         <ModalWrapper toggle={toggle}>
-            <Slider slides={slides} />
+            <Slider slides={slides} sliderName='ideas' />
         </ModalWrapper>
     );
 };

@@ -5,7 +5,7 @@ import noImg from '../../../../images/noImg.jpg';
 
 import s from './Slider.module.scss';
 
-const Slider = ({ slides }) => {
+const Slider = ({ slides, sliderName = 'default' }) => {
     const [count, setCount] = React.useState(0);
     const [btnsInit, setBtnsInit] = React.useState(false);
 
@@ -30,7 +30,8 @@ const Slider = ({ slides }) => {
     };
 
     React.useEffect(() => {
-        const img = document.getElementById(count);
+        // const img = document.getElementById(count);
+        const img = document.getElementById(`${count}${sliderName}`);
 
         if (!img) return;
 
@@ -61,7 +62,8 @@ const Slider = ({ slides }) => {
             <div className={s.sliderItems}>
                 {slides && slides.map((img, i) => (
                     <img
-                        id={i}
+                        // id={i}
+                        id={`${i}${sliderName}`}
                         onClick={() => setCount(i)}
                         key={i}
                         className={`${s.sliderItem} ${count === i ? s.activeItem : ''}`}

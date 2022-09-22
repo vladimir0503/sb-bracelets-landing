@@ -31,12 +31,19 @@ const Form = ({ toggle }) => {
 
         try {
             await api.fetchRequest(message);
-            dispatch(showModal('Заявка отправлена, с вами скоро свяжутся.'));
+            dispatch(showModal({
+                title: 'СПАСИБО ЗА ЗАЯВКУ!',
+                text: 'Наш менеджер скоро свяжется с Вами'
+            }));
             setName('');
             setTel('');
             setMail('');
         } catch (error) {
-            alert('Что то пошло не так(')
+            dispatch(showModal({
+                title: 'Что-то пошло не так',
+                text: ''
+            }));
+            console.log(error);
         } finally {
             closeForm();
             setSending(false);
@@ -64,6 +71,7 @@ const Form = ({ toggle }) => {
             ></input>
             <input
                 required
+                type='email'
                 onChange={e => setMail(e.target.value)}
                 placeholder='e-mail'
                 value={mail}></input>

@@ -14,7 +14,7 @@ const SliderBlock = () => {
     return (
         <div className={s.sliderBlock}>
             <div className={s.sliderBlockContent}>
-                <h1>Реализуйте изделия для себя и<br></br> своих близких с “МАСТЕРСКАЯ<br></br> ГРАВИРОВКИ”</h1>
+                <h1>Реализуйте изделия для себя<br></br> и своих близких с<br></br> “МАСТЕРСКАЯ ГРАВИРОВКИ”</h1>
                 <p>Добавте персональную<br></br> гравировку: имена
                     любимых,<br></br> значимые даты, любимый<br></br> футбольный клуб</p>
                 <button onClick={goCatalog}>КАТАЛОГ</button>

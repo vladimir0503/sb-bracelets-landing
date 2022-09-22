@@ -35,7 +35,6 @@ const Feedback = () => {
                     </div>
                 </div>
             </div>
-            {/* <Modal /> */}
         </>
     );
 };

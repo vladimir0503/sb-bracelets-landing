@@ -2,12 +2,15 @@ import React from 'react';
 import arrowLeft from '../../../../images/arrowLeft.svg'
 import arrowRight from '../../../../images/arrowRight.svg'
 import noImg from '../../../../images/noImg.jpg';
+import zoom from '../../../../images/zoom.png';
+import ModalWrapper from '../ProductInfo/ModalWrapper/ModalWrapper';
 
 import s from './Slider.module.scss';
 
 const Slider = ({ slides, sliderName = 'default' }) => {
     const [count, setCount] = React.useState(0);
     const [btnsInit, setBtnsInit] = React.useState(false);
+    const [zoomIn, setZoom] = React.useState(false);
 
     const slideRight = () => {
         setCount(count => {
@@ -53,8 +56,14 @@ const Slider = ({ slides, sliderName = 'default' }) => {
                         alt='slide'
                     />
                 ))}
+                {zoomIn
+                    && <ModalWrapper toggle={setZoom}>
+                        <img className={s.zoomedSlide} src={slides[count]} alt='slide' />
+                    </ModalWrapper>
+                }
                 <div className={`${s.btnsBlock} ${btnsInit ? s.active : ''}`}>
                     <button onClick={slideLeft}><img src={arrowLeft} alt='arrow' /></button>
+                    <button onClick={() => setZoom(true)}><img src={zoom} alt='zoom' /></button>
                     <button onClick={slideRight}><img src={arrowRight} alt='arrow' /></button>
                 </div>
             </div>
@@ -70,7 +79,7 @@ const Slider = ({ slides, sliderName = 'default' }) => {
                     />
                 ))}
             </div>
-        </div>
+        </div >
     )
 }
 

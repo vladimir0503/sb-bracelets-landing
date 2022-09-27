@@ -9,12 +9,12 @@ import s from './About.module.scss';
 const About = () => {
     return (
         <div className={s.about}>
-            {/* <Medal initTop={1442} initLeft={46} initRotate={110} img={medal} />
+            <Medal initTop={1442} initLeft={46} initRotate={110} img={medal} />
             <Medal initTop={1261} initLeft={586} initRotate={360} img={medal} />
             <Medal initTop={1838} initLeft={586} initRotate={360} img={medal} />
             <Medal initTop={2100} initLeft={686} initRotate={360} img={medal2} />
             <Medal initTop={2200} initLeft={786} initRotate={360} img={medal2} />
-            <Medal initTop={2300} initLeft={486} initRotate={360} img={medal2} /> */}
+            <Medal initTop={2300} initLeft={486} initRotate={360} img={medal2} />
             <div className={s.aboutContent}>
                 <div className={s.aboutItem}>
                     <Title text='О КОМПАНИИ' />
@@ -33,9 +33,6 @@ const About = () => {
                 <div id='delivery' className={s.aboutItem}>
                     <Title text='ДОСТАВКА' />
                     <div className={s.textWrapper}>
-                        {/* <p className={s.paymentDescr}>Доставка по России от 2 дней<br></br>
-                            Почтой России или силами ТК по предоплате - 250 руб.<br></br>
-                            Курьерская доставка СДЭК по России (по предоплате) - от 350 руб.*</p> */}
                         <div className={s.checkBlock}>
                             <img src={check} alt='check'/>
                             <p className={s.paymentDescr}>Доставка по России от 2 дней</p>
